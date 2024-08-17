@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -97,6 +97,81 @@
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>631</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Sitka Display Semibold</family>
+        <pointsize>48</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>MENÚ PERSONAL</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_cancelarReserva_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>170</y>
+        <width>191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Sitka Display</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Cancelar Reserva</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_cantMesas">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>170</y>
+        <width>191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Sitka Display</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Modificar cantidad 
+de mesas</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_regresarMenu_1">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>350</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Regresar</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -159,7 +234,7 @@
        <string>Modificar Reserva</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_salir_5">
+     <widget class="QPushButton" name="btn_disponibilidadCliente">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -203,6 +278,25 @@ de mesas</string>
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_regresarMenu_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>410</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Regresar</string>
+      </property>
+     </widget>
+     <zorder>btn_regresarMenu_2</zorder>
+     <zorder>btn_reservar</zorder>
+     <zorder>btn_cancelarReserva</zorder>
+     <zorder>btn_salir_4</zorder>
+     <zorder>btn_disponibilidadCliente</zorder>
+     <zorder>label_2</zorder>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -325,6 +419,9 @@ de mesas</string>
         <height>41</height>
        </rect>
       </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
      </widget>
      <widget class="QTimeEdit" name="timeEdit_horaReserva">
       <property name="geometry">
@@ -398,32 +495,17 @@ de mesas</string>
        <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_6">
-     <attribute name="title">
-      <string>Page</string>
-     </attribute>
-     <widget class="QLabel" name="label_11">
+     <widget class="QPushButton" name="btn_regresarCliente">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>20</y>
-        <width>581</width>
-        <height>101</height>
+        <x>630</x>
+        <y>450</y>
+        <width>91</width>
+        <height>31</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Sitka Display Semibold</family>
-        <pointsize>36</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
       <property name="text">
-       <string>Cancelar Reserva</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignmentFlag::AlignCenter</set>
+       <string>Regresar</string>
       </property>
      </widget>
     </widget>
@@ -434,34 +516,118 @@ de mesas</string>
      <widget class="QPushButton" name="btn_numMesas">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>220</y>
+        <x>320</x>
+        <y>330</y>
         <width>151</width>
         <height>51</height>
        </rect>
       </property>
       <property name="text">
-       <string>Reservar</string>
+       <string>Aceptar</string>
       </property>
      </widget>
      <widget class="QSpinBox" name="spinBox_numMesas">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>100</y>
+        <x>310</x>
+        <y>260</y>
         <width>161</width>
         <height>51</height>
        </rect>
       </property>
      </widget>
-     <widget class="QTextEdit" name="tE_Reservas">
+     <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>180</y>
+        <x>250</x>
+        <y>190</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese la cantidad de mesas que desee</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>591</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Sitka Display Semibold</family>
+        <pointsize>36</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Modificar Cantidad 
+de Mesas</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_regresarPersonal">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>400</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Regresar</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_regresarCliente_2">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>250</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Regresar</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="tE_Reservas_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>80</y>
         <width>291</width>
         <height>251</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_regresarCliente_5">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>390</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Regresar</string>
       </property>
      </widget>
     </widget>

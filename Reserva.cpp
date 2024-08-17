@@ -64,6 +64,10 @@ void Reserva::eliminarReserva(int id) {
     }
 }
 
+QString Reserva::getInfo() const  {
+    return Cliente::getInfo() + "Mesa Asignada: " + QString::number(mesaAsignada + 1) + "\n";
+}
+
 QString Reserva::obtenerReservas() {
     QString lista;
     for (const auto &reserva : reservas) {

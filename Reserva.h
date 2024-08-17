@@ -13,7 +13,8 @@ public:
     Reserva(int id, const QString &nombreCliente, int numTelefono, int numComensales, const QDate &fechaReserva, const QTime &horaReserva);
 
     void mostrarDatos() const;
-    //QString getInfo() const override;
+    QString getInfo() const override;
+    void setMesaAsignada(int mesa) { mesaAsignada = mesa; }
 
     static bool verificarDisponibilidad(const QDate &fecha, const QTime &hora);
     static void agregarReserva(Reserva *reserva);
@@ -33,10 +34,13 @@ public:
         return reservasEncontradas;
     }
 
+    static int obtenerNumeroMesaAsignado(const QDate &fecha, const QTime &hora);
+
 private:
 
     static QVector<Reserva*> reservas;
-    static int obtenerNumeroMesaAsignado(const QDate &fecha, const QTime &hora);
+
+    int mesaAsignada;
 };
 
 

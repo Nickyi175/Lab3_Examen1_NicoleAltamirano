@@ -39,6 +39,22 @@ private slots:
 
     void on_btn_cancelarReserva_clicked();
 
+    void on_btn_cancelarReserva_2_clicked();
+
+    void on_btn_cantMesas_clicked();
+
+    void on_btn_regresarMenu_2_clicked();
+
+    void on_btn_regresarMenu_1_clicked();
+
+    void on_btn_regresarPersonal_clicked();
+
+    void on_btn_regresarCliente_clicked();
+
+    void on_btn_disponibilidadCliente_clicked();
+
+    void on_btn_regresarCliente_5_clicked();
+
 private:
     Ui::MainWindow *ui;
     QVector<Mesas> mesas;
