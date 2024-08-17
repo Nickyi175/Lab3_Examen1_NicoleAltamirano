@@ -55,6 +55,26 @@ private slots:
 
     void on_btn_regresarCliente_5_clicked();
 
+    void on_btn_regresarCliente_2_clicked();
+
+    void on_btn_modificarCliente_clicked();
+
+    //void on_tabWidget_currentChanged(int index);
+
+    void on_btn_regresarCliente_3_clicked();
+
+    void on_btn_modificar_clicked();
+
+    void on_btn_modificarCliente_2_clicked();
+
+    void on_btn_disponibilidad_clicked();
+
+    void on_btn_disponibilidadCliente_2_clicked();
+
+    void on_btn_regresarCliente_6_clicked();
+
+    void on_btn_disponibilidad_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     QVector<Mesas> mesas;

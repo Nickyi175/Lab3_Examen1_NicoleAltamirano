@@ -22,6 +22,23 @@ bool Reserva::verificarDisponibilidad(const QDate &fecha, const QTime &hora) {
     return mesasOcupadas < mesasDisponibles;
 }
 
+int Reserva::obtenerMesasDisponibles(const QDate &fecha, const QTime &hora) {
+    int mesasOcupadas = 0;
+
+    for (const auto &reserva : reservas) {
+        if (reserva->fechaReserva == fecha && reserva->horaReserva == hora) {
+            mesasOcupadas++;
+        }
+    }
+
+    int mesasTotales = 5;
+    return mesasTotales - mesasOcupadas;
+}
+
+// const QVector<Reserva*>& Reserva::obtenerReservass() {
+//     return reservas;
+// }
+
 void Reserva::agregarReserva(Reserva *reserva) {
     if (verificarDisponibilidad(reserva->fechaReserva, reserva->horaReserva)) {
         reservas.append(reserva);
@@ -71,7 +88,7 @@ QString Reserva::getInfo() const  {
 QString Reserva::obtenerReservas() {
     QString lista;
     for (const auto &reserva : reservas) {
-        lista += QString("ID: %1, Nombre: %2, Telefono: %3, Comensales: %4, Fecha: %5, Hora: %6\n")
+        lista += QString("ID: %1 \nNombre: %2 \nTelefono: %3 \nNúmero de Comensales: %4 \nFecha: %5 \nHora: %6\n")
         .arg(reserva->getId())
             .arg(reserva->nombreCliente)
             .arg(reserva->numTelefono)

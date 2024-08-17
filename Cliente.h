@@ -30,7 +30,11 @@ public:
                        "\nNúmero de Contacto: "+QString::number(numTelefono)+"\nFecha: "+fechaReserva.toString("dd/MM/yyyy")+
                        "\nHora: "+horaReserva.toString("HH:mm")+"\n");
     }
-
+    void setNombreCliente(const QString& nombre);
+    void setTelefono(int telefono);
+    void setComensales(int comensales);
+    void setFecha(const QDate& fecha);
+    void setHora(const QTime& hora);
 };
 
 #endif // CLIENTE_H
